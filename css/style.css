@@ -1,0 +1,10 @@
+.bg_squares{
+    background-color: aqua;
+}
+
+
+.bg_sq{
+    background-color: gold;
+    width: 4rem;
+    height: 4rem;
+}
