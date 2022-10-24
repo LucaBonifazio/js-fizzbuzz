@@ -17,11 +17,13 @@
 const eleSquares = document.querySelector('.squares');
 
 
-for (let i = 0; i <= 100; i++) {  
-    eleSquares.innerHTML += ` <div class="col-1 sq bg_sq d-flex justify-content-center align-items-center">${i}</div>`;
+for (let i = 1; i <= 100; i++) {  
+    eleSquares.innerHTML += `<div class="col-1 sq bg_sq d-flex justify-content-center align-items-center mx-1">${i}</div>`;
     console.log(i);
 
     if (i % 3 == 0) {
-        eleSquares.innerHTML += `Fizz`;
-    }
+        eleSquares.innerHTML += `<div class="col-1 sq bg_fizz d-flex justify-content-center align-items-center mx-1">${'Fizz'}</div>`;
+    } else if (i % 5 == 0) {
+            eleSquares.innerHTML += `<div class="col-1 sq bg_buzz d-flex justify-content-center align-items-center mx-1">${'Buzz'}</div>`;
+        }
 };
