@@ -17,12 +17,12 @@
 let eleSquares = document.querySelector('.squares');
 
 for (let i = 1; i <= 100; i++) {  
-    if (i % 3 == 0) {
+    if (i % 3 == 0 && i % 5 == 0) {
+        eleSquares.innerHTML += `<div class="col-1 sq bg_both d-flex justify-content-center align-items-center mx-1">${'FizzBuzz'}</div>`;
+    } else if (i % 3 == 0) {
         eleSquares.innerHTML += `<div class="col-1 sq bg_fizz d-flex justify-content-center align-items-center mx-1">${'Fizz'}</div>`;
-    } else if (i % 5 == 0) {
+        } else if (i % 5 == 0) {
             eleSquares.innerHTML += `<div class="col-1 sq bg_buzz d-flex justify-content-center align-items-center mx-1">${'Buzz'}</div>`;
-        } else if (i % 3 == 0 && i % 5 == 0) {
-            eleSquares.innerHTML += `<div class="col-1 sq bg_both d-flex justify-content-center align-items-center mx-1">${'FizzBuzz'}</div>`;
         } else {
             eleSquares.innerHTML += `<div class="col-1 sq bg_sq d-flex justify-content-center align-items-center mx-1">${i}</div>`;
         }
