@@ -14,16 +14,17 @@
 // Applica stili differenti agli elementi aggiunti al DOM nel *BONUS 1*, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 // // Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 
-const eleSquares = document.querySelector('.squares');
-
+let eleSquares = document.querySelector('.squares');
 
 for (let i = 1; i <= 100; i++) {  
-    eleSquares.innerHTML += `<div class="col-1 sq bg_sq d-flex justify-content-center align-items-center mx-1">${i}</div>`;
-    console.log(i);
-
     if (i % 3 == 0) {
         eleSquares.innerHTML += `<div class="col-1 sq bg_fizz d-flex justify-content-center align-items-center mx-1">${'Fizz'}</div>`;
     } else if (i % 5 == 0) {
             eleSquares.innerHTML += `<div class="col-1 sq bg_buzz d-flex justify-content-center align-items-center mx-1">${'Buzz'}</div>`;
+        } else if (i % 3 == 0 && i % 5 == 0) {
+            eleSquares.innerHTML += `<div class="col-1 sq bg_both d-flex justify-content-center align-items-center mx-1">${'FizzBuzz'}</div>`;
+        } else {
+            eleSquares.innerHTML += `<div class="col-1 sq bg_sq d-flex justify-content-center align-items-center mx-1">${i}</div>`;
         }
 };
+
